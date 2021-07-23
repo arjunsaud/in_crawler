@@ -40,11 +40,11 @@ for x in newurls:
             json.dump(data,f,indent=4)
     with open("sample.json") as json_file:
         data=json.load(json_file)
-        temp=data["websites"]
+        #temp=data["websites"]
         y={
             "link":f_url,
             "title":title,
             "description":desc
         }
-        temp.append(y)
+        data.append(y)
     write_json(data)
